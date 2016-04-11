@@ -1,12 +1,12 @@
-<div>
+<!-- <div>
   <button class="btn btn-default" ng-repeat="letter in alphabet" ng-disabled="firstLetters.indexOf(letter) === -1" ng-click="filterByLetter(letter)" ng-class="{ 'btn-success': letter === activeLetter }"> {{ letter }} </button>
-</div>
+</div> -->
 
-<!-- <letter-picker-directive alphabet="alphabet" firstLetters="firstLetters"></letter-picker-directive> -->
+<letter-picker-directive></letter-picker-directive>
 <h2>Products</h2>
 <div ng-hide="products" class="alert alert-warning" role="alert">Please select a letter</div>
 <div>
   <ul class="list-group">
-    <li class="list-group-item" ng-repeat="product in products | orderBy: 'name'">{{ product.name }}</li>
+    <li class="list-group-item" ng-repeat="item in itemsByLetter | orderBy: 'name'">{{ item.name }}</li>
   </ul>
 <div>

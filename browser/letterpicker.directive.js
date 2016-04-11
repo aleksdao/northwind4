@@ -2,10 +2,9 @@
 
 northwind.directive("letterPickerDirective", function (ProductsFactory) {
   return {
-    scope: {
-      alphabet: "=",
-      firstLetters: "="
-    },
+    // scope: {
+    //   firstLetters: "="
+    // },
     templateUrl: "/letterpicker.html",
     link: function (scope) {
       scope.filterByLetter = function (letter) {
@@ -15,6 +14,14 @@ northwind.directive("letterPickerDirective", function (ProductsFactory) {
               scope.firstLetter = letter;
             })
       }
+      scope.alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+      ProductsFactory.fetchAll()
+        .then(function (firstLetters) {
+          console.log(firstLetters);
+          scope.firstLetters = firstLetters;
+        });
+
+
     }
   }
 })
