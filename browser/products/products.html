@@ -4,7 +4,7 @@
 
 <letter-picker-directive></letter-picker-directive>
 <h2>Products</h2>
-<div ng-hide="products" class="alert alert-warning" role="alert">Please select a letter</div>
+<div ng-hide="itemsByLetter" class="alert alert-warning" role="alert">Please select a letter</div>
 <div>
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="item in itemsByLetter | orderBy: 'name'">{{ item.name }}</li>
