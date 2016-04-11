@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Northwind Filter</title>
+    <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="/angular/angular.js" defer></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
+    <script src="/module.js" defer></script>
+    <script src="/products/products.controller.js" defer></script>
+    <script src="/products/products.factory.js" defer></script>
+    <script src="/products/products.state.js" defer></script>
+    <script src="/employees/employees.controller.js" defer></script>
+    <script src="/employees/employees.factory.js" defer></script>
+    <script src="/employees/employees.state.js" defer></script>
+    <script src="/letterpicker.directive.js" defer></script>
+  </head>
+  <body ng-app="northwind">
+    <div class="container">
+      <h1>Northwind Filter</h1>
+      <ul class="nav nav-pills">
+        <li><a href="#">Home</a></li>
+        <li><a ui-sref="products">Products</a></li>
+        <li><a ui-sref="employees">Employees</a></li>
+      </ul>
+      <ui-view></ui-view>
+    </div>
+  </body>
+</html>
