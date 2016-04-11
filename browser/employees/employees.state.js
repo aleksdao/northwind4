@@ -4,7 +4,7 @@ northwind.config(function ($stateProvider) {
       url: "/employees",
       templateUrl: "/employees/employees.html",
       resolve: {
-        activeLetters: function (EmployeesFactory) {
+        firstLetters: function (EmployeesFactory) {
           return EmployeesFactory.fetchAll();
         }
       },

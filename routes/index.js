@@ -5,16 +5,18 @@ var Employee = db.Employee;
 var Product = db.Product;
 
 router.get("/api/products", function (req, res, next) {
+  var firstLetters = [];
   Product.find()
     .then(function (products) {
-      var activeLetters = [];
       products.forEach(function (product) {
         var firstLetter = product.name[0];
-        if (activeLetters.indexOf(firstLetter) === -1)
-          activeLetters.push(firstLetter)
+        if (firstLetters.indexOf(firstLetter) === -1)
+          firstLetters.push(firstLetter)
       });
-      res.send(activeLetters);
+      console.log(firstLetters);
+      res.send(firstLetters);
     })
+
 })
 
 router.get("/api/products/:letter", function (req, res, next) {
@@ -28,13 +30,14 @@ router.get("/api/products/:letter", function (req, res, next) {
 router.get("/api/employees", function (req, res, next) {
   Employee.find()
     .then(function (employees) {
-      var activeLetters = [];
+      var firstLetters = [];
       employees.forEach(function (employee) {
         var firstLetter = employee.name[0];
-        if (activeLetters.indexOf(firstLetter) === -1)
-          activeLetters.push(firstLetter)
+        if (firstLetters.indexOf(firstLetter) === -1)
+          firstLetters.push(firstLetter)
       });
-      res.send(activeLetters);
+      console.log(firstLetters);
+      res.send(firstLetters);
     })
 })
 

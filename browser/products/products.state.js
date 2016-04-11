@@ -4,7 +4,7 @@ northwind.config(function ($stateProvider) {
       url: "/products",
       templateUrl: "/products/products.html",
       resolve: {
-        activeLetters: function (ProductsFactory) {
+        firstLetters: function (ProductsFactory) {
           return ProductsFactory.fetchAll()
         }
       },

@@ -1,10 +1,10 @@
-//tried using directive but for some reason, wasn't able to pass activeLetters in correctly
+//tried using directive but for some reason, wasn't able to pass firstLetters in correctly
 
 northwind.directive("letterPickerDirective", function (ProductsFactory) {
   return {
     scope: {
-      alphabet: "="
-      // activeLetters: "="
+      alphabet: "=",
+      firstLetters: "="
     },
     templateUrl: "/letterpicker.html",
     link: function (scope) {
@@ -12,14 +12,8 @@ northwind.directive("letterPickerDirective", function (ProductsFactory) {
           ProductsFactory.fetchByLetter(letter)
             .then(function (products) {
               scope.itemsByLetter = products;
-              scope.activeLetter = letter;
+              scope.firstLetter = letter;
             })
-      }
-      scope.activeLetters = function () {
-        return ProductsFactory.fetchAll()
-          .then(function (activeLetters) {
-            return activeLetters;
-          })
       }
     }
   }

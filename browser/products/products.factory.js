@@ -3,8 +3,8 @@ northwind.factory("ProductsFactory", function ($http) {
   factory.fetchAll = function () {
     return $http.get("/api/products")
       .then(function (response) {
-        var activeLetters = response.data;
-        return activeLetters;
+        var firstLetters = response.data;
+        return firstLetters;
       })
   }
   factory.fetchByLetter = function (letter) {
