@@ -10,14 +10,13 @@ northwind.config(function ($stateProvider) {
       },
       controller: "ProductsCtrl"
     })
-
+    // .state("productsByLetter", {
+    //   url: "/products/:letter",
+    //   templateUrl: "/browser/products/productsbyletter.html",
+    //   resolve: {
+    //     productsByLetter: function (ProductsFactory, $stateParams) {
+    //       return ProductsFactory.fetchByLetter($stateParams.letter);
+    //     }
+    //   }
+    // })
 })
-
-
-// .state("productsByLetter", {
-//   url: "/products/:letter",
-//   templateUrl: "/browser/products/productsbyletter.html",
-//   resolve: {
-//     productsByLetter:
-//   }
-// })

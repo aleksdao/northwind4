@@ -1,3 +1,10 @@
 <div>
   <button class="btn btn-default" ng-repeat="letter in alphabet" ng-disabled="firstLetters.indexOf(letter) === -1" ng-click="filterByLetter(letter)" ng-class="{ 'btn-success': letter === firstLetter }"> {{ letter }} </button>
 </div>
+<h2>{{ type }}</h2>
+<div ng-hide="itemsByLetter" class="alert alert-warning" role="alert">Please select a letter</div>
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in itemsByLetter | orderBy: 'name'">{{ item.name }}</li>
+  </ul>
+<div>
