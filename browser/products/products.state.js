@@ -1,4 +1,6 @@
-northwind.config(function ($stateProvider) {
+northwind.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.when("/", "/products");
   $stateProvider
     .state("products", {
       url: "/products",
@@ -10,13 +12,4 @@ northwind.config(function ($stateProvider) {
       },
       controller: "ProductsCtrl"
     })
-    // .state("productsByLetter", {
-    //   url: "/products/:letter",
-    //   templateUrl: "/browser/products/productsbyletter.html",
-    //   resolve: {
-    //     productsByLetter: function (ProductsFactory, $stateParams) {
-    //       return ProductsFactory.fetchByLetter($stateParams.letter);
-    //     }
-    //   }
-    // })
 })

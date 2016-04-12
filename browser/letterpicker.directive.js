@@ -27,13 +27,10 @@ northwind.directive("letterPickerDirective", function (ProductsFactory, Employee
         }
 
       }
-      // scope.firstLetters = scope.firstLetters;
-      // scope.alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-      // ProductsFactory.fetchAll()
-      //   .then(function (firstLetters) {
-      //     console.log(firstLetters);
-      //     scope.firstLetters = firstLetters;
-      //   });
+      scope.setActiveLetter = function (letter) {
+        scope.activeLetter = letter;
+      }
+
     }
 
     // }

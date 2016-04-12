@@ -1,5 +1,4 @@
 northwind.controller("EmployeesCtrl", function ($scope, firstLetters, EmployeesFactory) {
-  $scope.type = "Employees";
+  $scope.type = "employees";
   $scope.firstLetters = firstLetters;
-
 })
