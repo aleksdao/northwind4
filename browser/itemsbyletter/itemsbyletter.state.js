@@ -4,8 +4,8 @@ northwind.config(function ($stateProvider) {
       url:"/:letter",
       templateUrl: "/itemsbyletter/itemsbyletter.html",
       resolve: {
-        itemsByLetter: function (ProductsFactory, EmployeesFactory, $stateParams) {
-          return ProductsFactory.fetchByLetter($stateParams.letter)
+        itemsByLetter: function (ProductsFactory, $stateParams) {
+          return ProductsFactory.fetchByLetter($stateParams.letter);
         }
       },
       controller: "ItemsByLetterCtrl"
@@ -14,10 +14,10 @@ northwind.config(function ($stateProvider) {
       url:"/:letter",
       templateUrl: "/itemsbyletter/itemsbyletter.html",
       resolve: {
-        itemsByLetter: function (ProductsFactory, EmployeesFactory, $stateParams) {
+        itemsByLetter: function (EmployeesFactory, $stateParams) {
           return EmployeesFactory.fetchByLetter($stateParams.letter);
         }
       },
       controller: "ItemsByLetterCtrl"
-    })
-})
+    });
+});

@@ -9,5 +9,5 @@ northwind.config(function ($stateProvider) {
         }
       },
       controller: "EmployeesCtrl"
-    })
-})
+    });
+});

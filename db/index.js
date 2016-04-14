@@ -3,11 +3,11 @@ var Promise = require("bluebird");
 
 var employeeSchema = mongoose.Schema({
   name: String
-})
+});
 
 var productSchema = mongoose.Schema({
   name: String
-})
+});
 
 var Employee = mongoose.model("Employee", employeeSchema);
 var Product = mongoose.model("Product", productSchema);
@@ -24,10 +24,12 @@ var connect = function () {
     });
   });
   return _conn;
-}
+};
+
+
 
 module.exports = {
   Employee: Employee,
   Product: Product,
   connect: connect
-}
+};

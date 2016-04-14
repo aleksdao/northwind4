@@ -1,5 +1,3 @@
-northwind.controller("ItemsByLetterCtrl", function ($scope, itemsByLetter, ProductsFactory, EmployeesFactory) {
-  // $scope.type = "Products";
+northwind.controller("ItemsByLetterCtrl", function ($scope, itemsByLetter) {
   $scope.itemsByLetter = itemsByLetter;
-
-})
+});

@@ -7,9 +7,9 @@ northwind.config(function ($stateProvider, $urlRouterProvider, $locationProvider
       templateUrl: "/products/products.html",
       resolve: {
         firstLetters: function (ProductsFactory) {
-          return ProductsFactory.fetchAll()
+          return ProductsFactory.fetchAll();
         }
       },
       controller: "ProductsCtrl"
-    })
-})
+    });
+});

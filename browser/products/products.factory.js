@@ -1,3 +1,4 @@
+//maybe since the product factory and employees factory are so similar- they could share some code?
 northwind.factory("ProductsFactory", function ($http) {
   var factory = {};
   factory.fetchAll = function () {
